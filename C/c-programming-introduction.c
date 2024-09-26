@@ -2,6 +2,8 @@
 // DO NOT RUN THIS FILE, IT WILL NOT WORK LIKE YOU THINK IT WILL
 // like, your computer will probably explode i think
 
+// NOTE: I WILL MAKE THIS A MARKDOWN AT SOME POINT, I PROMISE
+
 // LESSON 1: HELLO WORLD
 #include <stdio.h>
 
