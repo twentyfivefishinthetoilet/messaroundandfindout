@@ -1,0 +1,2 @@
+My goal is to make a rock paper scissors game on as many platforms and coding languages that I can. Here is a little memorial of what I have done.<br>
+<small>*...Be prepared to see a LOT of `if` statements and/or switches...*</small>
