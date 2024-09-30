@@ -17,3 +17,21 @@
 I'm tired of using html, let's get started already.
 
 <h2>LESSON 1: <label style="color: #32a852;">"Hello, World!"</label></h2>
+<p>CODE:</p>
+    
+    #include <stdio.h>
+
+    int main(){
+        printf("Hello, World!");
+        return 0;
+    }
+
+<label>The class</label> 
+`<stdio.h>` 
+<label>imports basic input and output functions, along with file editing and more.</label>
+`int main(){...}` is where your main code goes. functions can be defined outside of main with `type functionName (paramaterType parameterName){...}` above `main()` and can be used in `main()`. 
+<br><br>
+What is a return type?<br>
+<span style="padding-left: 20px; padding-bottom: 7px;">>> <a href="https://en.wikipedia.org/wiki/Return_type"><em>From Wikipedia:</em></a> In computer programming, the return type (or result type) defines and constrains the data type of the value returned from a subroutine or method.<br>
+<span style="padding-left: 20px; padding-bottom: 7px;">>> Return types include `int`, `char`, `"A String"`, `float`, and `double`.
+<hr>
