@@ -4,7 +4,7 @@
 <span style="padding-left: 20px; padding-bottom: 12px;">>> One word: syntax.</span>
 <br>
 <br>
-<label style="font-size: 17px; padding-bottom: 5px;">"Why did you make this if there's like 500 other tutorials out there?"</label><br>r>
+<label style="font-size: 17px; padding-bottom: 5px;">"Why did you make this if there's like 500 other tutorials out there?"</label><br>
 <span style="padding-left: 20px; padding-bottom: 12px;">>> I made this as a cheet sheet for myself so if I ever go dumb and forget what a switch does I don't need to go onto GeeksForGeeks for the 1000th 
 <span style="padding-left: 20px; padding-bottom: 7px;">.&nbsp;.&nbsp;.&nbsp;time (though that may be easier than what I'm doing...). I'm posting this to github to keep track of my progress and <em>maybe</em> build my portfolio.<br><br>
 <label style="font-size: 17px; padding-bottom: 5px;">"What the hell is C?"</label><br>
