@@ -16,6 +16,7 @@
 <hr>
 I'm tired of using html, let's get started already.
 
+
 <h2>LESSON 1: <label style="color: #32a852;">"Hello, World!"</label></h2>
 <p>CODE:</p>
     
@@ -34,4 +35,28 @@ I'm tired of using html, let's get started already.
 What is a return type?<br>
 <span style="padding-left: 20px; padding-bottom: 7px;">>> <a href="https://en.wikipedia.org/wiki/Return_type"><em>From Wikipedia:</em></a> In computer programming, the return type (or result type) defines and constrains the data type of the value returned from a subroutine or method.<br>
 <span style="padding-left: 20px; padding-bottom: 7px;">>> Return types include `int`, `char`, `"A String"`, `float`, and `double`.
+<hr>
+
+
+<h2>LESSON 2: <label style="color: #32a852;">USER INPUT</label></h2>
+<p>CODE:</p>
+    
+    #include <stdio.h>
+
+    int main(){
+        double num;
+
+        printf("NUMBER GUESSING GAME!\n");
+        printf("QUESTION: WHAT IS YOUR NUMBER? ");
+        scanf("%lf",&num);
+        printf("GOT IT! IS YOUR NUMBER %lf?",num);
+        
+        return 0;
+    }
+
+<label>This code right here is a magical number guessing game that takes one question in order to work. To take user input in C, you need to use `scanf()`. The syntax for `scanf()` is `scanf("%format", &var)`.</label><br>
+<br>What is that `&` sign there for?<br>
+<span style="padding-left: 20px; padding-bottom: 7px;">>> Good question! `&` is an address operator, it finds location of the variable. Giving `scanf()` a variable without a `&` sign is like telling a mailman to give a package to "John".<br>
+<span style="padding-left: 20px; padding-bottom: 7px;">.&nbsp;.&nbsp;.&nbsp; Since there's like 10000 Johns out there, the mailman will just ask himself "Who the hell is John?!" and throws the package away.<br>
+<span style="padding-left: 20px; padding-bottom: 7px;">>> Now, if you were to give the mailman a package with the home address, zip code, and full name, then the package will be sent successfully given to the buyer.<br>
 <hr>
