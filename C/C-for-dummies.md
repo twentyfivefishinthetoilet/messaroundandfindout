@@ -58,5 +58,11 @@ What is a return type?<br>
 <br>What is that `&` sign there for?<br>
 <span style="padding-left: 20px; padding-bottom: 7px;">>> Good question! `&` is an address operator, it finds location of the variable. Giving `scanf()` a variable without a `&` sign is like telling a mailman to give a package to "John".<br>
 <span style="padding-left: 20px; padding-bottom: 7px;">.&nbsp;.&nbsp;.&nbsp; Since there's like 10000 Johns out there, the mailman will just ask himself "Who the hell is John?!" and throws the package away.<br>
-<span style="padding-left: 20px; padding-bottom: 7px;">>> Now, if you were to give the mailman a package with the home address, zip code, and full name, then the package will be sent successfully given to the buyer.<br>
+<span style="padding-left: 20px; padding-bottom: 7px;">>> Now, if you were to give the mailman a package with the home address, zip code, and full name, then the package will be sent successfully given to the buyer.<br><br>
+Small stuff I didn't explain:
+<ol>
+    <li>"\n" is an escape sequence, it brings you to a new line.</li>
+    <li>"%lf" is a format specifier, it'll print any double provided.</li>
+    <li>I probably should have probably said this beforehand, but the semicolon (;) at the end of each line declares the end of the line.</li>
+</ol>
 <hr>
