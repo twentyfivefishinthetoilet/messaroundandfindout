@@ -65,3 +65,32 @@ Small stuff I didn't explain:
     <li>I probably should have probably said this beforehand, but the semicolon (;) at the end of each line declares the end of the line.</li>
 </ol>
 <hr>
+
+<h2>LESSON 3: <label style="color: #32a852;">VARIABLES</label></h2>
+<p>CODE:</p>
+    
+    #include <stdio.h>
+
+    int main(){
+        int w = 15;
+        float x = 3.14159;
+        double y = 1.234567890111213;
+        char string[] = "Hello World!";
+        char z = '!';
+
+        printf("%d",x);
+        
+        return 0;
+    }
+
+<label>Remember return types? Those same types apply to variables! It's self explainatory when I put it like this...</label><br>
+<ol>
+    <li>int: can only be given an integer. (2-4 bytes)</li>
+    <li>float: can be given a decimal or an integer (floats can only go up to 8 floating point digits) (4 bytes)</li>
+    <li>double: can be given a decimal or an integer (doubles can go up to 16 floating point digits) (8 bytes)
+    <li>char: can only be given ONE (1) character, has to be in singular quotes ('') (1 byte)
+    <li>char[] (string): you can insert anything into a string. Note that if you insert a number in a string, you can't add it.</li>
+    <label>.&nbsp;.&nbsp;.&nbsp; (+1 bytes. Note that every character you add in a string adds a byte (+1 due to the null terminator.))</label>
+</ol>
+<label>In Python, these data types are the same (minus the character arrays for strings), you just don't need to declare it一the computer is smart enough to assume.</label>
+<hr>
