@@ -26,8 +26,64 @@
 <label>quick little message, i fully recommend using W3School, Geeksforgeeks, learnpython, or BroCode's videos on Youtube to learn Python. the only reason im making this is for a quick little cheat sheet and for fun. heck, maybe i'll even make a dollar off of this! ...right? <small>...right?</small></label>
 <br>
 <br>
+
+## Lesson 1: Hello, World!
+#### CODE: 
+
+    print("Hi Mom!!")
+
+*functions introduced: `print()`*
+
+`print()` is how you send messages to the output. We'll be covering why `"Hi Mom!!"` is in quotations later, but just know that if you want to print text like `Hello, World!`, you need to put it in single quotes `('')` or quotation marks/double quotes `("")`.
+
+## Lesson 2: Data types, variables, and comments.
+#### CODE: 
+
+    # this is a comment, the code ignores this.
+
+    """
+    This
+    is
+    a
+    muiltiline
+    comment
+    """
+
+    s = "This is a string"  # you can guess what this is
+    i = 5                   # int
+    f = 3.1415              # float
+    t = True                # bool
+    f = False               # bool
+    n = None                # a decloration of a variable, this variable doesn't have any value (hence "None")
+
+*functions introduced: `None`*
+
+*variables*
+<br>
+let's travel back in time to 6th grade algebra. remember variables like `x` and `y`? well, programming languages have variables too. they hold whatever information it's given, it's like a container. say i'm too lazy to type in "This is a string", i can just `print(s)` instead.
+
+*data types*
+<br>
+there are 5 types in Python which are labeled in the code above. 
+
+| Type | Description |
+| --- | --- |
+| String | String of characters, can be a sentence or a word |
+| Int | Integer, a full number |
+| Float | A number with a floating point | 
+| Bools | Can only return True or False |
+| `None` / Void | Has no value, placeholder. | 
+
+*<small>\* don't know what a value is? use `type()` and then put the variable you want to check inside the parentheses. (e.x. `print(type(variable))`)</small>*
+<br>
+*<small>\* to print a variable, use `print(var)`, make sure not to have quotation marks around the varibale because it's not a string.</small>*
+
+Python sets data types for you, it's smart enough to figure out that `1` is an int and `1.9` is a float. Know that in other languages, this isn't the case (in all low leveled languages at least).
+
+<br>
 <p style="text-align: center;">it's pretty bare bones here... don't worry, this is markdown page is still a work in progress!</p>
 <br>
+
 <hr>
 <label><small><em>Thanks for reading!</small></em></label>
 <br>
