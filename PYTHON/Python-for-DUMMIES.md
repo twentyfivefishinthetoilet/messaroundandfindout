@@ -26,10 +26,7 @@
 <label>quick little message, i fully recommend using W3School, Geeksforgeeks, learnpython, or BroCode's videos on Youtube to learn Python. the only reason im making this is for a quick little cheat sheet and for fun. heck, maybe i'll even make a dollar off of this! ...right? <small>...right?</small></label>
 <br>
 <br>
-
 <p style="text-align: center;">it's pretty bare bones here... don't worry, this is markdown page is still a work in progress!</p>
-
-<br>
 <br>
 <hr>
 <label><small><em>Thanks for reading!</small></em></label>
