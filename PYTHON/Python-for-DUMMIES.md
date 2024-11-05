@@ -107,6 +107,21 @@ in this instance if you were to try and print this, it would only print `"Orange
 
 to sum arrays up, arrays can hold multiple values in once variable.
 
+## Lesson 5: If statements
+#### CODE: 
+
+    age = 36
+    if age >= 21:
+        print("You're the legal drinking age!")
+    else:
+        print("You aren't the legal drinking age... at least with your own ID you aren't.")
+
+*functions introduced: `None`*
+
+If statements are a decision making process. if a condition is true, it'll execute a block of code. otherwise (or else), it'll execute a fallback block of code. 
+
+in my example, we have a variable that says a guy's age is 36. if we wanted to get into a bar, he could since he is of legal age. otherwise, if he were under 21, he wouldn't be able to drink.
+
 <hr>
 <br>
 <p style="text-align: center;">it's pretty bare bones here... don't worry, this is markdown page is still a work in progress!</p>
