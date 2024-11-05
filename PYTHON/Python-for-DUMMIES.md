@@ -20,7 +20,7 @@
 | used by TONS of people today, jobs are looking for people who know Python. | |
 | bragging rights | |
 
-<small>fun fact: python is so far away from binary that it has precision issues from time to time. running "print(0.3 == (0.2 + 0.1))" will return False!</small>
+<small>fun fact: python is so far away from binary that it has precision issues from time to time. running "`print(0.3 == (0.2 + 0.1))`" will return False!</small>
 <br>
 <br>
 <label>quick little message, i fully recommend using W3School, Geeksforgeeks, learnpython, or BroCode's videos on Youtube to learn Python. the only reason im making this is for a quick little cheat sheet and for fun. heck, maybe i'll even make a dollar off of this! ...right? <small>...right?</small></label>
