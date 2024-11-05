@@ -80,11 +80,39 @@ there are 5 types in Python which are labeled in the code above.
 
 Python sets data types for you, it's smart enough to figure out that `1` is an int and `1.9` is a float. Know that in other languages, this isn't the case (in all low leveled languages at least).
 
+## Lesson 3: User input
+#### CODE: 
+
+    i = input("What is your age? ")
+    print(f"Oh! Your age is {i}.")
+
+*functions introduced: `input()`*
+
+`input()` is pretty self explainatory, but let's break it down. `input()` takes one parameter and it's a string to print to the output, which in this case it's "What is your age? " (added space after the question mark for readability). assigning a variable to the input allows for the user's input to be used again, in this case it's variable `i`. note that i will ALWAYS be a string until changed via type conversion.
+
+## Lesson 4: Arrays
+#### CODE: 
+
+    fruitBasket = ["Banana", "Apple", "Orange"]
+
+*functions introduced: `None`*
+
+An array is like a basket of fruit. in this case our array holds 3 strings: a banana, an apple, and an orange. our fruit basket variable is able to hold multiple values at once, rather than assigning something like...
+
+    fruitBasket = "Banana"
+    fruitBasket = "Apple"
+    fruitBasket = "Orange"
+
+in this instance if you were to try and print this, it would only print `"Orange"`. if we were to print our original instance of our fruitBasket array, it would print `['Banana', 'Apple', 'Orange']`.
+
+to sum arrays up, arrays can hold multiple values in once variable.
+
+<hr>
 <br>
 <p style="text-align: center;">it's pretty bare bones here... don't worry, this is markdown page is still a work in progress!</p>
 <br>
-
 <hr>
+
 <label><small><em>Thanks for reading!</small></em></label>
 <br>
 <label><small><em><a style="color: yellow;" href="https://buymeacoffee.com/twentyfivefishinthetoilet">Buy me a coffee...</a> &nbsp;&nbsp; <a style="color: #5865F2;" href="https://discord.com/users/867068028658909234">Contact me on Discord...</a></small></em></label>
