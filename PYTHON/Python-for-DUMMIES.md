@@ -1,6 +1,17 @@
 <small><em>* All of this is written from my own learning experience, so take this with a grain of salt.</em></small>
 <h2>Python for DUMMIES <label style="font-size: 14px;">by @twentyfivefishinthetoilet</label></h2>
-<hr>
+<br>
+
+| TABLE OF CONTENTS | |
+| --- | --- |
+| Lesson 1 | Hello, World! |
+| Lesson 2 | Data types, variables, and comments |
+| Lesson 3 | User input |
+| Lesson 4 | Lists |
+| Lesson 5 (A, B) | Math |
+| Lesson 6 | If statements |
+
+<br>
 <label>this course was made to use as a cheat sheet for whenever i decide to put on my big boy pants and tutor people. in this course we'll be covering basic python functions and syntax to get you started on whatever the hell you want to do with this. before we start, let's go over some history of python.
 </label>
 <br>
@@ -90,37 +101,91 @@ Python sets data types for you, it's smart enough to figure out that `1` is an i
 
 `input()` is pretty self explainatory, but let's break it down. `input()` takes one parameter and it's a string to print to the output, which in this case it's "What is your age? " (added space after the question mark for readability). assigning a variable to the input allows for the user's input to be used again, in this case it's variable `i`. note that i will ALWAYS be a string until changed via type conversion.
 
-## Lesson 4: Arrays
+## Lesson 4: Lists
 #### CODE: 
 
     fruitBasket = ["Banana", "Apple", "Orange"]
 
 *functions introduced: `None`*
 
-An array is like a basket of fruit. in this case our array holds 3 strings: a banana, an apple, and an orange. our fruit basket variable is able to hold multiple values at once, rather than assigning something like...
+A list is like a basket of fruit. in this case our list holds 3 strings: a banana, an apple, and an orange. our fruit basket variable is able to hold multiple values at once, rather than assigning something like...
 
     fruitBasket = "Banana"
     fruitBasket = "Apple"
     fruitBasket = "Orange"
 
-in this instance if you were to try and print this, it would only print `"Orange"`. if we were to print our original instance of our fruitBasket array, it would print `['Banana', 'Apple', 'Orange']`.
+in this instance if you were to try and print this, it would only print `"Orange"`. if we were to print our original instance of our fruitBasket lists, it would print `['Banana', 'Apple', 'Orange']`.
 
-to sum arrays up, arrays can hold multiple values in once variable.
+to sum lists up, lists can hold multiple values in once variable.
 
-## Lesson 5: If statements
+## Lesson 5 (A): Math: Arithmetic functions
+#### CODE: 
+
+    x = 5
+
+    # Basic math functions
+    x += 1  # increment by 1 - shortened version of "x = x + 1"
+    x -= 1  # decrement by 1 - shortened version of "x = x - 1"
+    x /= 1  # divide x by 1 - shortened version of "x = x / 1"
+    x *= 1  # multiply x by 1 - shortened version of "x = x * 1"
+    x **= 1 # exponent - shortened version of "x = x ** 1"
+    x %= 2 # modulus - shortaned version of "x = x % 2"
+
+    # Math functions continued
+    abs(-26)   # absolute value
+    pow(5, 2)   # exponent; power (5 to the power of 2)
+    round(3.1415926535, 5)  # rounds a given float to the nearest digit provided
+    max(1, 1, 1, 5, 1000, 2)    # prints the greatest digit given out of all the of the digits
+    min(1, 1, 1, 5, 1000, 2)    # same thing as max but the most less digit
+    sum([5, 4, 5, 6])   # adds the 4 numbers in the list given
+
+*functions introduced: a crap ton; listed above*
+
+everything is explained in the comments. 
+
+## Lesson 5 (B): Math continued: Math functions
+#### CODE: 
+
+    import math
+    
+    # trigonometry
+    math.sin(5 / 2)  # sine
+    math.cos(0)  # cosine
+    math.tan(math.pi / 4)  # tangent
+    math.asin(1)  # asine 
+    math.acos(1)  # acosine
+    math.atan(1)  # atangent
+
+    # other useful functions 
+    math.ciel(3.1415)   # rounds up
+    math.floor(3.1415)   # rounds down
+    math.sqrt(5)    # square root
+    math.factorial(5)   # returns the factorial of a number (5!)
+
+    # constants
+    math.pi    # math.pi = 3.141592653589793
+    math.e     # math.e = 2.718281828459045
+    
+*functions introduced: a crap ton; listed above*
+
+theres more math functions but these are the ones people use a lot. everything is explained in the comments. 
+
+
+## Lesson 6: If statements
 #### CODE: 
 
     age = 36
     if age >= 21:
-        print("You're the legal drinking age!")
+        print("You can enter the bar!")
     else:
-        print("You aren't the legal drinking age... at least with your own ID you aren't.")
+        print("You can't enter the bar.")
 
 *functions introduced: `None`*
 
 If statements are a decision making process. if a condition is true, it'll execute a block of code. otherwise (or else), it'll execute a fallback block of code. 
 
-in my example, we have a variable that says a guy's age is 36. if we wanted to get into a bar, he could since he is of legal age. otherwise, if he were under 21, he wouldn't be able to drink.
+in my example, we have a variable that says a guy's age is 36. if we wanted to get into a bar, he could since he is of legal age. otherwise, if he were under 21, he wouldn't be denied access to the bar.
+
 
 <hr>
 <br>
