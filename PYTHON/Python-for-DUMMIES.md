@@ -168,8 +168,9 @@ everything is explained in the comments.
     
 *functions introduced: a crap ton; listed above*
 
-theres more math functions but these are the ones people use a lot. everything is explained in the comments. 
+instead of going over the functions, lets go over the `import` statement at the top of the text. import includes libraries from outside of the code. libraries are pre-written lines of code that is written by some nerd who did it for you. 
 
+did you find a library online that you wanted to use? use `pip install LibraryName` in the command prompt.
 
 ## Lesson 6: If statements
 #### CODE: 
