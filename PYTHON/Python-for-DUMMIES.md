@@ -12,7 +12,7 @@
 | Lesson 6 | If statements |
 
 <br>
-<label>this course was made to use as a cheat sheet for whenever i decide to put on my big boy pants and tutor people. in this course we'll be covering basic python functions and syntax to get you started on whatever the hell you want to do with this. before we start, let's go over some history of python.
+<label>this course was made to use as a cheat sheet for whenever i decide to tutor people. in this course we'll be covering basic python functions and syntax to get you started on whatever the hell you want to do with this. before we start, let's go over some history of python.
 </label>
 <br>
 <br>
