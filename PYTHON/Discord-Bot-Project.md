@@ -12,7 +12,11 @@ This project is a step by step tutorial on how to make a Discord bot from the gr
 
 **Step 2.** Great, we made our bot! Let's edit it so we can actually use it. Change the name and description as needed then click `OAuth2`. Scroll down until you see `OAuth2 URL Generator` and then click the box that says `bot`.
 
-<img src="twentyfivefishinthetoilet/messaroundandfindout/PYTHON/Discord Bot Project Images/Step2.png">
+<img src="https://github.com/twentyfivefishinthetoilet/messaroundandfindout/blob/main/PYTHON/Discord%20Bot%20Project%20Images/Step2.png?raw=true">
+
+Scroll down a little further, then click the `Send Messages` and `Use Slash Commands` checkboxes.
+
+<img src="">
 
 ## Scripting the bot
 
