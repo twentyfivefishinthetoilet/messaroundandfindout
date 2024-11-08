@@ -10,8 +10,12 @@
 | Lesson 4 | Lists |
 | Lesson 5 (A, B) | Math |
 | Lesson 6 | If statements |
+| Lesson 7 | Logic | 
+| Lesson 8 | While loops |
 
 <br>
+
+#### Introduction
 <label>this course was made to use as a cheat sheet for whenever i decide to tutor people. in this course we'll be covering basic python functions and syntax to get you started on whatever the hell you want to do with this. before we start, let's go over some history of python.
 </label>
 <br>
@@ -187,6 +191,41 @@ If statements are a decision making process. if a condition is true, it'll execu
 
 in my example, we have a variable that says a guy's age is 36. if we wanted to get into a bar, he could since he is of legal age. otherwise, if he were under 21, he wouldn't be denied access to the bar.
 
+
+## Lesson 7: Logic
+#### CODE: 
+
+    # 1. ">=" : is greater than or equal to
+    # 2. "<=" : is less than or equal to
+    # 3. "==" : is equal to
+
+*functions introduced: `None`*
+
+`if` statements are all about logic, the explanations are in the code. An example is below to go off of.
+
+    if int_variable >= smaller_int_variable:
+        # ...
+    
+    if bool_variable == True:
+        # ...
+
+    if int_variable <= greater_int_variable:
+        # ...
+
+## Lesson 8: While loops
+#### CODE: 
+
+    import time
+
+    while book_isnt_found == True:
+        keep_looking()
+        time.sleep(1)
+    else:
+        stop_searching()
+        
+*functions introduced: No legit functions introduced*
+
+a `while` loop is a block of code that will continue running as long as a condition is `True`. in this example, a person is walking through the library trying to find a book. `while` the person hasn't found the book, he'll keep searching. `else`, he finds the book, he'll stop looking.
 
 <hr>
 <br>
