@@ -16,7 +16,9 @@ This project is a step by step tutorial on how to make a Discord bot from the gr
 
 Scroll down a little further, then click the `Send Messages` and `Use Slash Commands` checkboxes.
 
-<img src="">
+<img src="https://github.com/twentyfivefishinthetoilet/messaroundandfindout/blob/main/PYTHON/Discord%20Bot%20Project%20Images/Step2B.png?raw=true">
+
+
 
 ## Scripting the bot
 

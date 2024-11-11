@@ -227,6 +227,22 @@ in my example, we have a variable that says a guy's age is 36. if we wanted to g
 
 a `while` loop is a block of code that will continue running as long as a condition is `True`. in this example, a person is walking through the library trying to find a book. `while` the person hasn't found the book, he'll keep searching. `else`, he finds the book, he'll stop looking.
 
+## Lesson 9: For loops
+#### CODE: 
+
+    fruit_basket = ["banana", "apple", "orange", "grape", "apple", "banana",  "orange",]
+
+    for fruit in range(len(fruit_basket)):
+        print(fruit_basket[i])
+
+*functions introduced: `range()`, `len()`*
+
+`range()`: holds numbers and starts at 0 by default and increments by 1 by default. `range()` can take in 3 parameters: start, stop, step. start is the starting number, stop is what number you want to stop at, and step is how much you want to increment by.
+
+`len()`: gets the length of an object. for example, an `array`, it returns the amount of items in it. for a `string`, it returns how many characters are in it. for an `int`... well, it doesn't have a length so it'll return an error.
+
+a `for` loop is a block of code that will continue running until a condition is yet to be completed. in my example, we have an `int` named `fruit` and an array of `string`s named `fruit_basket`. `fruit` gets iterated through the length of `fruit_basket` and prints `fruit_basket` at the index of `fruit`.
+
 <hr>
 <br>
 <p style="text-align: center;">it's pretty bare bones here... don't worry, this is markdown page is still a work in progress!</p>
