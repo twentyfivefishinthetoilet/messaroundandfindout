@@ -18,7 +18,7 @@ float hypotenuse(float sidea, float sideb){
 
     // hypotenuse in real world math:
     // c = √a² + b²
-    
+
     printf("Your hypotenuse is " BOLD "%.2f\n", h);
     return h;
 }
@@ -28,21 +28,21 @@ float area_Triangle(float base, float height){
 
     // area of a triangle through base and height
     // b * h * 1/2
-    
+
     printf("The area of %.2f" GRAY " (base) " RESET "and %.2f" GRAY " (height) " RESET "is %.2f\n", base, height, area);
     return area;
 }
 
-float area_Circle(float radius){
+float circumference(float radius){
 
-    float area = 2 * 3.14159 * radius;
+    float c = 2 * 3.14159 * radius;
 
-    // area of a circle formula in actual math:
-    // a = 2πr
-    
-    printf("The area of the circle with the radius of %.2f is" BOLD " %.2f." RESET, radius, area);
+    // circumference of a circle formula in actual math:
+    // c = 2πr
 
-    return area;
+    printf("The area of the circle with the radius of %.2f is" BOLD " %.2f." RESET, radius, c);
+
+    return c;
 }
 
 float herons(float sidea, float sideb, float sidec){
@@ -53,21 +53,21 @@ float herons(float sidea, float sideb, float sidec){
     // herons formula in actual math
     // note that s is half of the perimeter
     // area = √s(s - a)(s - b)(s - c)
-    
+
     printf("The area of this triangle with sides %.2f, %.2f, and %.2f is" BOLD " %.2f" RESET, sidea, sideb, sidec, a);
 
     return a;
 }
 
 float distance(float A[2], float B[2]){
-    
+
     float step1 = (B[0] - A[0]) * (B[0] - A[0]);
     float step2 = (B[1] - A[1]) * (B[1] - A[1]);
     float d = sqrt((step1 + step2));
 
     // distance formula in actual math
     // d = √(x₂ - x₁)² + (y₂ - y₁)²
-    
+
     printf("The distance between points (%.2f, %.2f) and (%.2f, %.2f) is" BOLD " %.2f" RESET, A[0], A[1], B[0], B[1], d);
 }
 
