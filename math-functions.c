@@ -15,12 +15,20 @@
 
 float hypotenuse(float sidea, float sideb){
     float h = sqrt(pow(sidea, 2) + pow(sideb, 2));
+
+    // hypotenuse in real world math:
+    // c = √a² + b²
+    
     printf("Your hypotenuse is " BOLD "%.2f\n", h);
     return h;
 }
 
 float area_Triangle(float base, float height){
     float area = (base + height) / 2;
+
+    // area of a triangle through base and height
+    // b * h * 1/2
+    
     printf("The area of %.2f" GRAY " (base) " RESET "and %.2f" GRAY " (height) " RESET "is %.2f\n", base, height, area);
     return area;
 }
@@ -28,6 +36,10 @@ float area_Triangle(float base, float height){
 float area_Circle(float radius){
 
     float area = 2 * 3.14159 * radius;
+
+    // area of a circle formula in actual math:
+    // a = 2πr
+    
     printf("The area of the circle with the radius of %.2f is" BOLD " %.2f." RESET, radius, area);
 
     return area;
@@ -37,18 +49,25 @@ float herons(float sidea, float sideb, float sidec){
     float s = (sidea + sideb + sidec) / 2;
     float a = sqrt((s * (s - sidea) * (s - sideb) * (s - sidec)));
 
+    // herons is used to find area through 3 sides of the triangle
+    // herons formula in actual math
+    // note that s is half of the perimeter
+    // area = √s(s - a)(s - b)(s - c)
+    
     printf("The area of this triangle with sides %.2f, %.2f, and %.2f is" BOLD " %.2f" RESET, sidea, sideb, sidec, a);
 
     return a;
 }
 
 float distance(float A[2], float B[2]){
-    // A[2] is x and y of point A
-    // B[2] is x and y of point B
-
+    
     float step1 = (B[0] - A[0]) * (B[0] - A[0]);
     float step2 = (B[1] - A[1]) * (B[1] - A[1]);
     float d = sqrt((step1 + step2));
+
+    // distance formula in actual math
+    // d = √(x₂ - x₁)² + (y₂ - y₁)²
+    
     printf("The distance between points (%.2f, %.2f) and (%.2f, %.2f) is" BOLD " %.2f" RESET, A[0], A[1], B[0], B[1], d);
 }
 
@@ -58,13 +77,18 @@ float incenter(float A[2], float B[2], float C[2]){
     // b = length of side AC
     // c = length of side AB
 
+    // step one: distance formula
     float a = sqrt(pow((B[0] - C[0]), 2) + pow((B[1] - C[1]), 2));
     float b = sqrt(pow((C[0] - A[0]), 2) + pow((C[1] - A[1]), 2));
     float c = sqrt(pow((A[0] - B[0]), 2) + pow((A[1] - B[1]), 2));
 
-    // incenter x and y
+    // step two: incenter x and y
     float x = (a * A[0] + b * B[0] + c * C[0]) / (a + b + c);
     float y = (a * A[1] + b * B[1] + c * C[1]) / (a + b + c);
+
+    // incenter formula in actual math
+    // for x: ax₁ + bx₂ + cx₃ / a + b + c
+    // for y: ay₁ + by₂ + cy₃ / a + b + c
 
     printf("The incenter of points\nA " GRAY "(%.2f, %.2f)," RESET
     "\nB " GRAY "(%.2f, %.2f)," RESET "\nC " GRAY "(%.2f, %.2f)," RESET
@@ -79,6 +103,7 @@ int main(){
     float randB[2] = {};
     float randC[2] = {};
 
+    // generating random floats to use with incenter()
     for (int i = 0; i < 2; i++){
         int randomNumber = rand() % (15 - 0 + 1) + 0;
         float randomFloat = (rand() % 2) * 0.50;
@@ -99,6 +124,7 @@ int main(){
         float finalFloat = randomNumber + randomFloat;
         randC[i] = finalFloat;
     }
+    // look man, use chatgpt or calculate it yourself if you're in the mood to fact check me
 
     float A[2] = {2.00, 1.00};
     float B[2] = {6.00, 4.00};
