@@ -1,3 +1,7 @@
+// this project originally was just a screw around thing but then i got tired of math so here we are
+// uses escape sequences for colors (if you couldn't tell already)
+// blame me for being lazy and not implementing type conversion yet
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
