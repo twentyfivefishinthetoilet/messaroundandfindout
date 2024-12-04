@@ -33,6 +33,11 @@ float area_Triangle(float base, float height){
     return area;
 }
 
+float slope(float A[2], float B[2]){
+    float s = (B[1] - A[1]) / (B[0] - A[0]);
+    printf("The slope of the line passing through points (%.2f, %.2f) and (%.2f, %.2f) is " BOLD "%.2f. " RESET GRAY "(%.2f/%.2f)" RESET, A[0], A[1], B[0], B[1], s, (B[1] - A[1]), (B[0] - A[0]));
+}
+
 float circumference(float radius){
 
     float c = 2 * 3.14159 * radius;
@@ -132,10 +137,12 @@ int main(){
 
     // hypotenuse(3, 4); // float hypotenuse(float sidea, float sideb)
     // area_Triangle(3, 4); // float area_Triangle(float base, float height)
-    incenter(A, B, C); // float incenter(float A[2], float B[2], float C[2])
+    // incenter(A, B, C); // float incenter(float A[2], float B[2], float C[2])
     // herons(4.50, 4.00, 3.102); // float herons(float sidea, float sideb, float sidec)
     //area_Circle(2.00); // float area_Circle(float radius)
     // distance(A, B); // float distance(float A[2], float B[2])
+
+    slope(randA, randB);
 
     return 0;
 }
