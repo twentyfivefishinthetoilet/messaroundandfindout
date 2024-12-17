@@ -42,7 +42,7 @@ float hypotenuse(float sidea, float sideb){
 }
 
 float area_Triangle(float base, float height){
-    float area = (base + height) / 2;
+    float area = (base * height) / 2;
 
     // area of a triangle through base and height
     // b * h * 1/2
