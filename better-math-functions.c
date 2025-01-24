@@ -13,6 +13,45 @@
 #define BOLD "\033[1m"
 #define NORMAL "\033[22m"
 
+// TODO (code-wide): fix functions to NOT print a whole sentence. why did i think that was a good idea?
+
+typedef struct
+{
+    float a[2];
+    float b[2];
+    float c[2];
+} randNumbers;
+
+
+randNumbers randomPoints(){
+    // generating random points
+
+    randNumbers rnums;
+
+    for (int i = 0; i < 2; i++) {
+        int randomNumber = rand() % 16;
+        float randomFloat = ((float)rand() / RAND_MAX) * 0.5;
+        float finalFloat = randomNumber + randomFloat;
+        rnums.a[i] = finalFloat;
+    }
+
+    for (int i = 0; i < 2; i++) {
+        int randomNumber = rand() % 16;
+        float randomFloat = ((float)rand() / RAND_MAX) * 0.5;
+        float finalFloat = randomNumber + randomFloat;
+        rnums.b[i] = finalFloat;
+    }
+
+    for (int i = 0; i < 2; i++) {
+        int randomNumber = rand() % 16;
+        float randomFloat = ((float)rand() / RAND_MAX) * 0.5;
+        float finalFloat = randomNumber + randomFloat;
+        rnums.c[i] = finalFloat;
+    }
+
+    return rnums;
+}
+
 void swap(float point1[2], float point2[2]) {
     float butter[2]; // this was going to say buffer but i kept typing butter so it's butter now.
     butter[0] = point1[0];
@@ -36,24 +75,21 @@ float hypotenuse(float sidea, float sideb){
 
     // hypotenuse in real world math:
     // c = √a² + b²
-
-    printf("Your hypotenuse is " BOLD "%.2f\n", h);
     return h;
 }
 
 float area_Triangle(float base, float height){
-    float area = (base * height) / 2;
+    float area = (base + height) / 2;
 
     // area of a triangle through base and height
     // b * h * 1/2
 
-    printf("The area of %.2f" GRAY " (base) " RESET "and %.2f" GRAY " (height) " RESET "is %.2f\n", base, height, area);
     return area;
 }
 
 float slope(float A[2], float B[2]){
     float s = (B[1] - A[1]) / (B[0] - A[0]);
-    printf("The slope of the line passing through points (%.2f, %.2f) and (%.2f, %.2f) is " BOLD "%.2f. " RESET GRAY "(%.2f/%.2f)" RESET, A[0], A[1], B[0], B[1], s, (B[1] - A[1]), (B[0] - A[0]));
+    return s;
 }
 
 float circumference(float radius){
@@ -62,8 +98,6 @@ float circumference(float radius){
 
     // circumference of a circle formula in actual math:
     // c = 2πr
-
-    printf("The area of the circle with the radius of %.2f is" BOLD " %.2f." RESET, radius, c);
 
     return c;
 }
@@ -77,8 +111,6 @@ float herons(float sidea, float sideb, float sidec){
     // note that s is half of the perimeter
     // area = √s(s - a)(s - b)(s - c)
 
-    printf("The area of this triangle with sides %.2f, %.2f, and %.2f is" BOLD " %.2f" RESET, sidea, sideb, sidec, a);
-
     return a;
 }
 
@@ -91,8 +123,15 @@ float distance(float A[2], float B[2]){
     // distance formula in actual math
     // d = √(x₂ - x₁)² + (y₂ - y₁)²
 
-    printf("The distance between points (%.2f, %.2f) and (%.2f, %.2f) is" BOLD " %f" RESET, A[0], A[1], B[0], B[1], d);
+    return d;
 }
+
+typedef struct
+{
+    float x;
+    float y;
+} Points;
+
 
 float incenter(float A[2], float B[2], float C[2]){
 
@@ -114,10 +153,7 @@ float incenter(float A[2], float B[2], float C[2]){
     // for x: ax₁ + bx₂ + cx₃ / a + b + c
     // for y: ay₁ + by₂ + cy₃ / a + b + c
 
-    printf("The incenter of points\nA " GRAY "(%.2f, %.2f)," RESET
-    "\nB " GRAY "(%.2f, %.2f)," RESET "\nC " GRAY "(%.2f, %.2f)," RESET
-    "\nis " BOLD "(%.4f, %.4f)" RESET, A[0], A[1], B[0], B[1], C[0], C[1], x, y);
-    // look man, use chatgpt or calculate it yourself if you're in the mood to fact check me
+    printf("(%f, %f)\n", x, y);
 }
 
 float circumcenter(float A[2], float B[2], float C[2]){
@@ -132,15 +168,11 @@ float circumcenter(float A[2], float B[2], float C[2]){
         swap(A, B);
     }
 
-    printf("(%.4f, %.4f), (%.4f, %.4f), (%.4f, %.4f)\n", A[0], A[1], B[0], B[1], C[0], C[1]);
+    printf("(%f, %f), (%f, %f), (%f, %f)\n", A[0], A[1], B[0], B[1], C[0], C[1]);
 
     float s1 = (B[1] - A[1]) / (B[0] - A[0]);
     float s2 = (C[1] - B[1]) / (C[0] - B[0]);
     float s3 = (A[1] - C[1]) / (A[0] - C[0]);
-
-    printf("y - %f = %f(x - %f) {%f < x < %f}\n", A[1], s1, A[0], A[0], B[0]);
-    printf("y - %f = %f(x - %f) {%f < x < %f}\n", B[1], s2, B[0], B[0], C[0]);
-    printf("y - %f = %f(x - %f) {%f < x < %f}\n", C[1], s3, C[0], A[0], C[0]);
 
     float mp_sidea = midpoint(A, B);
 
@@ -165,59 +197,36 @@ float circumcenter(float A[2], float B[2], float C[2]){
     float NEG_slope_sideb = -1.0 / slope_sideb;
     float NEG_slope_sidec = -1.0 / slope_sidec;
 
-    /* printf("%f\n", slope_sidea);
-    printf("%f\n", slope_sideb);
-    printf("%f", slope_sidec); */
+    float b1 = mid_sidea_y - NEG_slope_sidea * mid_sidea_x; // y-intercept of line 1
+    float b2 = mid_sideb_y - NEG_slope_sideb * mid_sideb_x; // y-intercept of line 2
 
+
+    float circumcenter_x = (b2 - b1) / (NEG_slope_sidea - NEG_slope_sideb);
+    float circumcenter_y = NEG_slope_sidea * circumcenter_x + b1;
+
+    /*
     printf("y - %f = %f(x - %f)\n", mid_sidea_y, NEG_slope_sidea, mid_sidea_x);
     printf("y - %f = %f(x - %f)\n", mid_sideb_y, NEG_slope_sideb, mid_sideb_x);
     printf("y - %f = %f(x - %f)\n", mid_sidec_y, NEG_slope_sidec, mid_sidec_x);
+    */
 
+   printf("(%f, %f)\n", circumcenter_x, circumcenter_y);
 }
 
 int main(){
 
     srand(time(NULL));
 
-    float randA[2] = {};
-    float randB[2] = {};
-    float randC[2] = {};
+    randNumbers randset = randomPoints();
 
-    // generating random points
-    for (int i = 0; i < 2; i++){
-        int randomNumber = rand() % (15 - 0 + 1) + 0;
-        float randomFloat = (rand() % 2) * 0.50;
-        float finalFloat = randomNumber + randomFloat;
-        randA[i] = finalFloat;
-    }
+    float A[2] = {0, 10};
+    float B[2] = {6, 9};
+    float C[2] = {3, 2};
+    float D[2] = {3, 9.5};
+    float E[2] = {3.1252,7.4281};
 
-    for (int i = 0; i < 2; i++){
-        int randomNumber = rand() % (15 - 0 + 1) + 0;
-        float randomFloat = (rand() % 2) * 0.50;
-        float finalFloat = randomNumber + randomFloat;
-        randB[i] = finalFloat;
-    }
-
-    for (int i = 0; i < 2; i++){
-        int randomNumber = rand() % (15 - 0 + 1) + 0;
-        float randomFloat = (rand() % 2) * 0.50;
-        float finalFloat = randomNumber + randomFloat;
-        randC[i] = finalFloat;
-    }
-
-    float A[2] = {0.0000,14.5000};
-    float B[2] = {4.0000,15.5000};
-    float C[2] = {10, 14};
-
-    // hypotenuse(3, 4); // float hypotenuse(float sidea, float sideb)
-    // area_Triangle(3, 4); // float area_Triangle(float base, float height)
-    // incenter(A, B, C); // float incenter(float A[2], float B[2], float C[2])
-    // herons(4.50, 4.00, 3.102); // float herons(float sidea, float sideb, float sidec)
-    //area_Circle(2.00); // float area_Circle(float radius)
-    // distance(A, B); // float distance(float A[2], float B[2])
-    // printf("MIDPOINT: (%f, %f)", midpoint(A, B));
-
-    circumcenter(randA, randB, randC);
+    circumcenter(randset.a, randset.b, randset.c);
+    incenter(randset.a, randset.b, randset.c);
 
     return 0;
 }
