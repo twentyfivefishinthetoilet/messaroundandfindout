@@ -13,8 +13,7 @@
 #define BOLD "\033[1m"
 #define NORMAL "\033[22m"
 
-// TODO (code-wide): fix functions to NOT print a whole sentence. why did i think that was a good idea?
-
+//  ̶T̶O̶D̶O̶ ̶(̶c̶o̶d̶e̶-̶w̶i̶d̶e̶)̶:̶ ̶f̶i̶x̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶s̶ ̶t̶o̶ ̶N̶O̶T̶ ̶p̶r̶i̶n̶t̶ ̶a̶ ̶w̶h̶o̶l̶e̶ ̶s̶e̶n̶t̶e̶n̶c̶e̶.̶ ̶w̶h̶y̶ ̶d̶i̶d̶ ̶i̶ ̶t̶h̶i̶n̶k̶ ̶t̶h̶a̶t̶ ̶w̶a̶s̶ ̶a̶ ̶g̶o̶o̶d̶ ̶i̶d̶e̶a̶?̶  => FIXED!!! 
 typedef struct
 {
     float a[2];
